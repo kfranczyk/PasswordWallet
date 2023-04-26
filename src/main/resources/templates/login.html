@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org" xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Main Page</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/globalCss.css}"/>
+</head>
+<body>
+  <nav class="topbarNav nav-font" >
+    <div class="home-group">
+        <div>
+            <a th:href="@{/login}" class="orange-medium">Home</a>
+        </div>
+    </div>
+    <div class="links-group">
+        
+        <div>
+                <a th:href="@{/login}" class="orange-medium">Sign in</a>
+        </div>  
+          <div>
+            <a th:href="@{/register}" class="orange-medium">Sign up</a>
+          </div>
+    </div>
+    </nav>
+
+    <h1 class="dark-blue centered title-text">
+        Password Wallet
+    </h1>
+    <h2 class="dark-blue centered">
+        Sign in
+    </h2>
+
+    <article >
+
+        <form action="/login" method="post">
+            
+            <label for="login" class="label-medium-blue">Login<span class="span-red">*</span>:</label>
+            <input type="text" id="login" name="login" class="font-fix typein-input" required>
+
+            <label for="password" class="label-medium-blue">Password<span class="span-red">*</span>:</label>
+            <input type="password" id="password" name="password" class="font-fix typein-input" required>
+            <div class="centered">
+                <input type="submit" value="login" class="form-button font-fix">
+            </div>
+        </form>
+        <div th:if="${param.error}" class="label-medium-blue">
+            Invalid username and password.
+        </div>
+        <div th:if="${param.logout}" class="label-medium-blue">
+            You have been logged out.
+        </div>
+
+    </article>
+
+</body>
+</html>

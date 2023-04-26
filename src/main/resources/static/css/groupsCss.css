@@ -1,0 +1,12 @@
+.group-form {
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.group-form label,input {
+    margin: 0 2em;
+    text-align: center;
+}

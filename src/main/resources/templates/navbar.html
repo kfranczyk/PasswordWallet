@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org" xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Navbar</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/globalCss.css}"/>
+
+</head>
+<body>
+<nav th:fragment="navbar" class="topbarNav nav-font" >
+  <div class="home-group">
+    <div>
+      <a th:href="@{/password}" class="orange-medium">Home</a>
+    </div>
+  </div>
+  <div class="links-group">
+    <div>
+      <a th:href="@{/password}" class="orange-medium">Passwords</a>
+    </div>
+    <div>
+      <a th:href="@{/newEntry}" class="orange-medium">New Entry</a>
+    </div>
+    <div>
+      <a th:href="@{/groups}" class="orange-medium">Groups</a>
+    </div>
+
+    <div>
+      <a th:href="@{/logout}" class="orange-medium">Logout</a>
+    </div>
+
+  </div>
+</nav>
+</body>
+</html>

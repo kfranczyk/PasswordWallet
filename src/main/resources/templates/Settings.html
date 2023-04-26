@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org" xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Main Page</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/globalCss.css}"/>
+
+</head>
+<body>
+
+<div th:insert="navbar :: navbar"></div>
+
+<h1 class="dark-blue centered title-text">
+    Password Wallet
+</h1>
+<h2 class="dark-blue centered">
+    Change Password
+</h2>
+
+<article >
+
+    <form th:action="@{/changePassword}" th:object="${tmpPassword}" method="post">
+
+        <label for="currpassword" class="label-medium-blue">Current password<span class="span-red">*</span>:</label>
+        <input type="password" id="currpassword" name="currpassword" class="font-fix typein-input"  required>
+
+        <label for="password" class="label-medium-blue">New password<span class="span-red">*</span>:</label>
+        <input type="password" id="password" name="password" class="font-fix typein-input"  required>
+        <div class="is-hash-box">
+            <label for="sha512" class="label-medium-blue">Store password using sha512?<span class="span-red" >*</span></label>
+            <input type="radio" id="sha512" name="isPassHash" class="is-hash-input" value="1" >
+
+            <label for="hmac" class="label-medium-blue">Store password using HMAC?<span class="span-red" >*</span></label>
+            <input type="radio" id="hmac" name="isPassHash" class="is-hash-input" value="0" >
+        </div>
+        <div class="centered">
+            <input type="submit" value="change" class="form-button font-fix">
+        </div>
+    </form>
+</article>
+
+</body>
+</html>

@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+:root{
+    --blue-background: linear-gradient(180deg, rgba(25, 117, 235, 0.2) 0%, rgba(152, 194, 249, 0.2) 61.31%, rgba(255, 255, 255, 0) 100%);
+    --blue-dark-background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(0deg, #217CF2 0%, rgba(33, 124, 242, 0) 185.06%);
+}
+
+body{font-family: 'Montserrat', sans-serif;
+    margin:0;
+    background: var(--blue-background);
+    background-attachment: fixed;
+}
+
+.orange-medium{
+    color:orange;
+}
+
+.nav-font{
+    font-size:1.3rem;
+    font-style: normal;
+    font-weight: 500;
+}
+
+
+.topbarNav{
+    display:flex;
+    justify-content: space-around;
+
+    background: var(--blue-dark-background);
+}
+.links-group{
+    display: flex;
+    justify-content: space-around;
+}
+.links-group > div, .home-group > div{
+    margin: 0.5em 0.5em;
+}
+
+article{
+    margin-top: 0.5em;
+}
+
+.content-nav{
+    width:80%;
+    margin: auto;
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: auto auto auto auto;
+
+    background: var(--blue-dark-background);
+    border-radius: 12px 12px 0px 0px;
+}
+.content-nav > div{
+    padding:0.2em;
+}
+.content-nav div:first-child{
+    margin-left: 1em;
+}
+.content-nav div:last-child{
+    margin-right: 1em;
+}
+
+/* posty */
+section {
+    display: grid;
+    width: calc(80% - 1em);
+    grid-template-columns: auto auto auto auto;
+    margin: 0.5em auto;
+    background: white;
+    padding: 0.5em;
+    border: solid 0.1em;
+
+    /* do zmiany przy wievportach*/
+    grid-gap: 1em 0;
+    align-items: center;
+}
+
+.btn-container{
+    place-self: center;
+}
+
+.btn{
+
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: white;
+  border: none;
+  color: white;
+  padding: 1em;
+  cursor: pointer;
+}
+.btn-copy {
+    background-image: url(../icons/copyIcon.svg);
+}
+.btn-more {
+    background-image: url(../icons/moreIcon.svg);
+}
+.btn-show {
+    background-image: url(../icons/showIcon.svg);
+}
+.btn-show-active {
+    background-image: url(../icons/showIconActive.svg);
+}
+
+.btn:hover{
+    background-color: rgba(33, 124, 242,50%);
+}

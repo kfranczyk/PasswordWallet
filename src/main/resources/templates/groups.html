@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org" xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Group menu</title>
+  <link rel="stylesheet" type="text/css" th:href="@{/css/globalCss.css}"/>
+  <link rel="stylesheet" type="text/css" href="../static/css/globalCss.css"/>
+  <link rel="stylesheet" type="text/css" th:href="@{/css/groupsCss.css}"/>
+
+  <script src="../js/groups.js" defer> </script>
+
+
+</head>
+<body>
+<div th:insert="navbar :: navbar"></div>
+
+<h1 class="dark-blue centered title-text">
+  Password Wallet
+</h1>
+<h2 class="dark-blue centered">
+  Add group
+</h2>
+
+<article >
+  <div th:if="${errorMessage}">
+    <h4 th:text="${errorMessage}" class="label-medium-blue"></h4>
+  </div>
+  <form th:action="@{/newGroup}" th:object="${tmpGroup}" method="post">
+    <label for="groupTitle" class="label-medium-blue">Group title<span class="span-red">*</span>:</label>
+    <input type="text" id="groupTitle" name="title" class="font-fix typein-input" required  pattern="^([\wąłęźćóżńśĄŁĘŹĆÓŻŃŚ\-_#\(\)]{3,45})$">
+
+    <label for="groupColor" class="label-medium-blue">Color<span class="span-red">*</span>:</label>
+    <input type="color" id="groupColor" name="color" value="#217CF2" class="font-fix typein-input" style="padding:1px 2px">
+
+    <article id="group_test">
+      <nav id="group_test_nav" class="content-nav nav-font" style="width: 100%">
+          <div id="group_test_title" class="orange-medium group-title">Test title</div>
+          <div class="orange-medium">Title</div>
+          <div class="orange-medium">Site</div>
+          <div class="orange-medium">Password</div>
+          <div class="orange-medium">More</div>
+      </nav>
+    </article>
+
+    <div class="centered">
+      <input id="submit" type="submit" value="submit" class="form-button font-fix">
+    </div>
+  </form>
+</article>
+<h2 class="dark-blue centered">
+  Menage Groups
+</h2>
+
+
+
+</body>
+</html>
+

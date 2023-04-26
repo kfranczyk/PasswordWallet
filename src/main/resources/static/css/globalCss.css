@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+:root{
+    --font-name: 'Montserrat', sans-serif;
+    --blue-background: linear-gradient(180deg, rgba(25, 117, 235, 0.2) 0%, rgba(152, 194, 249, 0.2) 61.31%, rgba(255, 255, 255, 0) 100%);
+    --blue-darker: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(0deg, #217CF2 0%, rgba(33, 124, 242, 0) 185.06%);
+    --blue-dark: rgb(37 106 194);
+}
+
+body{
+    font-family: var(--font-name);
+    margin:0;
+    background: var(--blue-background);
+    background-attachment: fixed;
+}
+
+.orange-medium{
+    color:orange;
+}
+
+.nav-font{
+    font-size:1.3rem;
+    font-style: normal;
+    font-weight: 500;
+    /* border: 1px solid rgba(0, 0, 0, 0.45);*/
+    text-shadow: 1px 1px 1px rgb(0 0 0 / 45%);
+}
+
+.group-title{
+    grid-area: span 1 / span 4;
+    /* text-decoration: underline; */
+    font-size: 1.1em;
+    border-bottom: ridge;
+}
+
+
+.topbarNav{
+    display:flex;
+    justify-content: space-around;
+
+    background: var(--blue-darker);
+}
+.links-group{
+    display: flex;
+    justify-content: space-around;
+}
+.links-group > div, .home-group > div{
+    margin: 0.5em 0.5em;
+}
+
+article{
+    margin-top: 0.5em;
+}
+
+.content-nav{
+    width:80%;
+    margin: auto;
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: 25% 30% 25% 20%;
+    text-align: center;
+
+    background: var(--blue-darker);
+    border-radius: 12px 12px 0px 0px;
+}
+.content-nav > div{
+    padding:0.2em;
+}
+
+
+/* posty */
+.password-content-short {
+    display: grid;
+    width: calc(80% - 1em);
+    grid-template-columns: 25% 30% 25% 20%;
+    text-align: center;
+    place-items: center;
+    margin: 0.5em auto;
+    background: white;
+    padding: 0.5em;
+    border: solid 0.15em var(--blue-dark);
+
+    /* do zmiany przy wievportach*/
+    grid-gap: 1em 0;
+    align-items: center;
+}
+
+.btn-container{
+    place-self: center;
+}
+
+.btn{
+
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: white;
+  border: none;
+  color: white;
+  padding: 1em;
+  cursor: pointer;
+}
+
+.btn-edit{
+    background-image: url(../icons/editIcon.svg);
+}
+.btn-delete{
+    background-image: url(../icons/deleteIcon.svg);
+}
+.btn-copy {
+    background-image: url(../icons/copyIcon.svg);
+}
+.btn-more {
+    background-image: url(../icons/moreIcon.svg);
+}
+.btn-more-rot {
+    background-image: url(../icons/moreIcon.svg);
+    transform: rotate(-90deg);
+}
+.btn-show {
+    background-image: url(../icons/showIcon.svg);
+}
+.btn-show-active {
+    background-image: url(../icons/showIconActive.svg);
+}
+
+.btn:hover{
+    background-color: rgba(33, 124, 242,50%);
+}
+.passw-input {
+    font-family: var(--font-name);
+    padding: 0;
+    border: 0;
+    font-size: medium;
+    width: 100%;
+    color: black;
+    background: white;
+    text-align: center;
+}
+
+
+/* do strony logowania i rejestracji*/
+.centered {
+    text-align: center;
+} 
+.title-text{
+    margin-top: 15vh;
+}
+.dark-blue {
+    color: var(--blue-dark);
+}
+
+.label-medium-blue{
+    color:var(--blue-dark);
+    FONT-WEIGHT: 600;
+    font-size: large;
+}
+.form-button{
+    padding: 0.7em 1.5em;
+    background-color: rgb(74 127 196);
+    border: none;
+    border-radius: 0.5em;
+    color: orange;
+    font-weight: bold;
+}
+.form-button:hover {
+    background-color: rgba(74, 127, 196, 0.712);
+}
+
+.font-fix {
+    font-family: var(--font-name);
+}
+
+article > form {
+    width:30%;
+    margin:auto;
+}
+
+.typein-input{
+    width: 100%;
+    padding: 0.4em;
+    border: solid 0.2em var(--blue-dark);
+    border-radius: 0.3em;
+    margin: 0.5em 0;
+    box-sizing:border-box
+}
+
+.is-hash-box{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.is-hash-input{
+    width:2em;
+    height:2em;
+}
+
+.typein-textarea{
+    min-width: 100%;
+    min-height: 4em;
+    max-width: 100%;
+    max-height: 8em;
+}
+
+.span-red{
+    color:red;
+}
+
+.desc-div{
+    grid-column: 2 / 4;
+}
+
+
